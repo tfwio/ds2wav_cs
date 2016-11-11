@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ds2wav", "..\cs\ds2wav.csproj", "{92097144-B9F8-405A-A978-C029B2B67234}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Win32 = Debug|Win32
+		Debug|Win64 = Debug|Win64
+		Release|Any CPU = Release|Any CPU
+		Release|Win32 = Release|Win32
+		Release|Win64 = Release|Win64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92097144-B9F8-405A-A978-C029B2B67234}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Debug|Any CPU.Build.0 = Debug|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Debug|Win32.Build.0 = Debug|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Debug|Win64.ActiveCfg = Debug|Win64
+		{92097144-B9F8-405A-A978-C029B2B67234}.Debug|Win64.Build.0 = Debug|Win64
+		{92097144-B9F8-405A-A978-C029B2B67234}.Release|Any CPU.ActiveCfg = Release|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Release|Any CPU.Build.0 = Release|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Release|Win32.ActiveCfg = Release|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Release|Win32.Build.0 = Release|Win32
+		{92097144-B9F8-405A-A978-C029B2B67234}.Release|Win64.ActiveCfg = Release|Win64
+		{92097144-B9F8-405A-A978-C029B2B67234}.Release|Win64.Build.0 = Release|Win64
+	EndGlobalSection
+EndGlobal

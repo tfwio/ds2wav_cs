@@ -1,0 +1,40 @@
+
+
+NOTE
+-------------
+
+[the 'more than you need to know' section...]
+
+Once upon a time, I had actually written this into a 12-channel step-sequencer;
+albeit, with a not so practical UI, edit and save features were dismally
+minimal to say the least...
+
+The more powerful your machine (PC), the better—but I've found that with the synth
+version, there is a HUGE speed difference in targeting x86 (WOW64) vs x64 binaries.
+
+(what a surprise)
+
+Even then, not so fun to tinker around with unless you up the 'latency' in a
+standard sound device such as DirectSound or WinAPI.  With ASIO and machines
+that work properly with NAudio's MediaFoundation whatever-is-called API it
+works much much more adequately...
+
+Moral of this story is: x64 targets are lots faster---but then again, I
+didn't release the .NET generator version of it since I've already ported
+that to C++ upon which managed code pales in comparison.
+
+About the cs ('synth') generator app (offline: WIP)
+------------------
+
+We'll see if I can repurpose this guy....
+
+About the C++ app (offline: WIP)
+------------------
+
+Yep, I decided also to port this to be cross-platform compatible sometime
+around September or October of 2016 in C/CPP (using IPlug/WDL_OL).
+
+I'll probably GIT that up here before I start working on the envelope editor
+for the UI since I love the one that I'd written (off-line) in CSharp with
+undo/redo and pan/zoom capability.  I'll be a happy camper if I can get it
+up here by or around DEC 21.
