@@ -1,10 +1,10 @@
 ﻿// - copyright 20160119 tfwroble [gmail]
 namespace System.IO
 {
-	using System;
+  using System;
   using System.Collections.Generic;
 
-	class IniReader : IDisposable
+  class IniReader : IDisposable
   {
     #region IDisposable implementation
 
@@ -123,14 +123,14 @@ namespace System.IO
   {
     Stream       Stream { get; set; }
     StreamWriter Writer { get; set; }
-#if __WIN
+    #if __WIN
     public string NewLine { get; set; } = "\r\n";
-#else
-		public string NewLine { get; set; } = "\n";
-#endif
-		#region .ctor
+    #else
+    public string NewLine { get; set; } = "\n";
+    #endif
+    #region .ctor
 
-		public IniWriter(string outputFile)
+    public IniWriter(string outputFile)
     {
       if (File.Exists (outputFile)) File.Delete (outputFile);
       Stream = new FileStream(outputFile, FileMode.OpenOrCreate);
