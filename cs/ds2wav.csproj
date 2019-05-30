@@ -8,20 +8,22 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ds2wav</RootNamespace>
     <AssemblyName>ds2wav</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <NoWin32Manifest>False</NoWin32Manifest>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <NoStdLib>False</NoStdLib>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\build\obj\$(Configuration)\</IntermediateOutputPath>
     <WarningLevel>4</WarningLevel>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <SignAssembly>False</SignAssembly>
     <DelaySign>False</DelaySign>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <OutputPath>bin\$(Configuration)-$(Platform)\</OutputPath>
+    <OutputPath>..\build\$(Configuration)-$(Platform)\</OutputPath>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <BaseIntermediateOutputPath>..\build\obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'Win64' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -43,7 +45,6 @@
     <Optimize>True</Optimize>
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <DefineConstants>TRACE</DefineConstants>
-    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -65,9 +66,19 @@
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
     <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp">
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
     </Reference>
@@ -112,6 +123,7 @@
     <Compile Include="source\WaveFormatEncoding.cs">
       <DependentUpon>wave.cs</DependentUpon>
     </Compile>
+    <Compile Include="source\WriterExt.cs" />
     <Compile Include="source\WZSTR.cs">
       <DependentUpon>wave.cs</DependentUpon>
     </Compile>
@@ -120,9 +132,6 @@
     </Compile>
     <Compile Include="source\DsPreset.cs" />
     <Compile Include="source\DrumSynthFloat.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="source" />
