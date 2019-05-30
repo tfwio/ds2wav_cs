@@ -10,11 +10,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ds2wav")]
-[assembly: AssemblyDescription("maxim digital audio - drumsynth - ported to csharp by tfwio")]
+[assembly: AssemblyDescription("DrumSynth2 ported to C# console app")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ds2wav")]
-[assembly: AssemblyCopyright("Copyright Maxim Digital Audio, 2007; CSharp meanderings Copyright tfwio 2016")]
+[assembly: AssemblyCopyright("Copyright Maxim Digital Audio, 2007")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0")]
+[assembly: AssemblyVersion("0.1.1")]
