@@ -36,15 +36,15 @@ namespace on.iff
 
 		public void Write(BinaryWriter writer)
 		{
-			writer.Write(ckID);
-			writer.Write(ckLength);
-			writer.Write(uNote);
-			writer.Write(fineTune);
-			writer.Write(Gain);
-			writer.Write(noteLow);
-			writer.Write(noteHigh);
-			writer.Write(velLow);
-			writer.Write(velHigh);
+			writer.WriteE(ckID);
+			writer.WriteE(ckLength);
+			writer.WriteE(uNote);
+			writer.WriteE(fineTune);
+			writer.WriteE(Gain);
+			writer.WriteE(noteLow);
+			writer.WriteE(noteHigh);
+			writer.WriteE(velLow);
+			writer.WriteE(velHigh);
 		}
     
 		public void Prepare(sbyte note, byte tune, byte gain, sbyte klo, sbyte khi, sbyte vlo = 1, sbyte vhi = 127)

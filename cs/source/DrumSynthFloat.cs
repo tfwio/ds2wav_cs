@@ -5,6 +5,7 @@ using on.iff;
 using on.dsformat;
 namespace on.drumsynth2
 {
+  
   /// <summary>
   /// Description of ds2wav.
   /// We should probably be using doble instead of floats.
@@ -639,9 +640,9 @@ namespace on.drumsynth2
           for(j = 0; j<BUFFER_SIZE; j++) //clipping + output
           {
             wavewords++;
-            if(DF[j] > clippoint)       writer.Write(clippoint); //wave[wavewords] = clippoint;
-            else if(DF[j] < -clippoint) writer.Write((short)-clippoint); //wave[wavewords] = (short)-clippoint;
-            else                        writer.Write(DF[j]); //wave[wavewords] = DF[j];
+            if(DF[j] > clippoint)       writer.WriteE(clippoint); //wave[wavewords] = clippoint;
+            else if(DF[j] < -clippoint) writer.WriteE((short)-clippoint); //wave[wavewords] = (short)-clippoint;
+            else                        writer.WriteE(DF[j]); //wave[wavewords] = DF[j];
             
             //if(DF[j] > clippoint)       wave[wavewords] = clippoint;
             //else if(DF[j] < -clippoint) wave[wavewords] = (short)-clippoint;

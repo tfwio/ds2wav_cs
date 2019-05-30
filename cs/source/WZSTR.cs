@@ -18,7 +18,7 @@ namespace on.iff
 		// public void Read(BinaryReader writer) {}
 		public void Write(BinaryWriter writer)
 		{
-			writer.Write(Tag);
+			writer.WriteE(Tag);
 			Value.Write(writer);
 		}
 	}

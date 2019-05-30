@@ -25,7 +25,7 @@ namespace on.iff
 		// ANSI
 		public void Write(BinaryWriter writer)
 		{
-			writer.Write(Length);
+			writer.WriteE(Length);
 			writer.Write(StrValue);
 		}
 

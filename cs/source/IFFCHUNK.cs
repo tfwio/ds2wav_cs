@@ -11,15 +11,15 @@ namespace on.iff
     
     public void Read(BinaryReader writer)
     {
-      this.Name   = writer.ReadUInt32();
-      this.Length = writer.ReadUInt32();
-      this.Tag    = writer.ReadUInt32();
+      this.Name   = writer.ReadUInt32e();
+      this.Length = writer.ReadUInt32e();
+      this.Tag    = writer.ReadUInt32e();
     }
     public void Write(BinaryWriter writer)
     {
-      writer.Write(Name);
-      writer.Write(Length);
-      writer.Write(Tag);
+      writer.WriteE(Name);
+      writer.WriteE(Length);
+      writer.WriteE(Tag);
     }
   }
   class SUBCHUNK
@@ -29,13 +29,13 @@ namespace on.iff
     
     public void Read(BinaryReader writer)
     {
-      this.Name   = writer.ReadUInt32();
-      this.Length = writer.ReadUInt32();
+      this.Name   = writer.ReadUInt32e();
+      this.Length = writer.ReadUInt32e();
     }
     public void Write(BinaryWriter writer)
     {
-      writer.Write(Name);
-      writer.Write(Length);
+      writer.WriteE(Name);
+      writer.WriteE(Length);
     }
   }
 }
