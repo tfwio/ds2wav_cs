@@ -14,14 +14,14 @@
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <NoStdLib>False</NoStdLib>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <IntermediateOutputPath>..\build\obj\$(Configuration)\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\..\build\obj\$(Configuration)\</IntermediateOutputPath>
     <WarningLevel>4</WarningLevel>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <SignAssembly>False</SignAssembly>
     <DelaySign>False</DelaySign>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <OutputPath>..\build\$(Configuration)-$(Platform)\</OutputPath>
+    <OutputPath>..\..\build\netfx-$(Configuration)-$(Platform)\</OutputPath>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <BaseIntermediateOutputPath>..\build\obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
@@ -46,14 +46,8 @@
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  <PropertyGroup Condition=" '$(Platform)' == 'Win32' ">
     <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win64' ">
-    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <StartAction>Project</StartAction>
@@ -94,48 +88,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="source\IFFCHUNK.cs">
-      <DependentUpon>wave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="source\INST.cs">
-      <DependentUpon>wave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="source\ListType.cs">
-      <DependentUpon>wave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="source\c3\DoubleMathExtension.cs" />
-    <Compile Include="source\c3\DPoint.cs" />
-    <Compile Include="source\c3\extensions.cs" />
-    <Compile Include="source\c3\FileInfoNExt.cs" />
-    <Compile Include="source\c3\FloatPoint.cs" />
-    <Compile Include="source\c3\FloatRect.cs" />
-    <Compile Include="source\c3\FMathHelper.cs" />
-    <Compile Include="source\c3\ini.cs" />
-    <None Include="source\c3\interop.cs" />
-    <Compile Include="source\c3\math.cs" />
-    <Compile Include="source\c3\MinMax.cs" />
-    <Compile Include="source\c3\NumericExtensions.cs" />
-    <Compile Include="source\c3\SuperOld.cs" />
-    <Compile Include="source\RiffType.cs">
-      <DependentUpon>wave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="source\wave.cs" />
-    <Compile Include="source\WaveFormatEncoding.cs">
-      <DependentUpon>wave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="source\WriterExt.cs" />
-    <Compile Include="source\WZSTR.cs">
-      <DependentUpon>wave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="source\ZSTR.cs">
-      <DependentUpon>wave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="source\DsPreset.cs" />
-    <Compile Include="source\DrumSynthFloat.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="source" />
-    <Folder Include="source\c3" />
-  </ItemGroup>
+  <ItemGroup />
+  <Import Project="..\ds2\ds2.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,10 @@
-#! cmd.exe /c
 @echo off
-REM set msbuild_path=C:\Program Files (x86)\msbuild\14.0\bin
-set msbuild_path=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin
+:: set msbuild_path=C:\Program Files (x86)\msbuild\14.0\bin
+:: set msbuild_path=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin
+set msbuild_path=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin
 set PATH=%PATH%;%msbuild_path%
-msbuild /m "ide\\ds2wav.sln" "/t:ds2wav:Clean" "/p:Platform=Any CPU;Configuration=Debug"
-msbuild /m "ide\\ds2wav.sln" "/t:ds2wav:Clean" "/p:Platform=Any CPU;Configuration=Release"
+msbuild /m "ide\\ds2wav.sln" "/t:_netfx\ds2wav:Clean" "/p:Platform=Any CPU;Configuration=Debug"
+msbuild /m "ide\\ds2wav.sln" "/t:_netfx\ds2wav:Clean" "/p:Platform=Any CPU;Configuration=Release"
+dotnet clean "ide\\ds2wav.sln" "/t:_netcore\ds2wav" "/p:Platform=Any CPU;Configuration=Debug"
+dotnet clean "ide\\ds2wav.sln" "/t:_netcore\ds2wav" "/p:Platform=Any CPU;Configuration=Release"
+pause

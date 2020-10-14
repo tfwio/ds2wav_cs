@@ -1,5 +1,7 @@
 *.userprefs
 *.user
 /misc/library
-*.csproj.user
-/build
+.vs
+bin
+obj
+build

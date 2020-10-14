@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>41d0fe7d-c4a1-4d2d-a404-d3a3650c16f2</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ds2</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)c3\DoubleMathExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\DPoint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\FileInfoNExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\FloatPoint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\FloatRect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\FMathHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\ini.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\math.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\MinMax.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\NumericExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)c3\SuperOld.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DrumSynthFloat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DsPreset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IFFCHUNK.cs">
+      <DependentUpon>wave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)INST.cs">
+      <DependentUpon>wave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ListType.cs">
+      <DependentUpon>wave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)RiffType.cs">
+      <DependentUpon>wave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)wave.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WaveFormatEncoding.cs">
+      <DependentUpon>wave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)WriterExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WZSTR.cs">
+      <DependentUpon>wave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ZSTR.cs">
+      <DependentUpon>wave.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)c3\interop.cs" />
+  </ItemGroup>
+</Project>
